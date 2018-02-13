@@ -1,0 +1,12 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 200LX_02X05
+D 200LX serial connector
+$ENDCMP
+#
+$CMP TRS3243E
+D RS-232 LINE DRIVER/RECEIVER
+K rs-232
+$ENDCMP
+#
+#End Doc Library
