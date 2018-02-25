@@ -1,4 +1,4 @@
-update=Wed 21 Feb 2018 08:07:44 PM EET
+update=Sun 25 Feb 2018 12:57:08 AM EET
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,3 +63,4 @@ LibName31=contrib
 LibName32=valves
 LibName33=/home/zokier/lx/lx_serial/trs3243e
 LibName34=/home/zokier/lx/kicad-ESP8266/ESP8266
+LibName35=lx_parts
