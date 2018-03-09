@@ -187,7 +187,7 @@ U 1 1 5A8DD30F
 P 4600 4400
 F 0 "SW1" H 4650 4500 50  0000 L CNN
 F 1 "SW_Push" H 4600 4340 50  0000 C CNN
-F 2 "" H 4600 4600 50  0001 C CNN
+F 2 "ssop_20:TL3305" H 4600 4600 50  0001 C CNN
 F 3 "" H 4600 4600 50  0001 C CNN
 	1    4600 4400
 	0    -1   -1   0   
@@ -231,7 +231,7 @@ U 1 1 5A8F4A0E
 P 700 3000
 F 0 "J1" H 700 3100 50  0000 C CNN
 F 1 "Conn_01x02" H 700 2800 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 700 3000 50  0001 C CNN
+F 2 "Connectors_JST:JST_PH_S2B-PH-K_02x2.00mm_Angled" H 700 3000 50  0001 C CNN
 F 3 "" H 700 3000 50  0001 C CNN
 	1    700  3000
 	-1   0    0    1   
@@ -347,31 +347,7 @@ F 3 "" H 4350 4400 50  0001 C CNN
 	1    4350 4400
 	1    0    0    -1  
 $EndComp
-$Comp
-L SW_Push SW2
-U 1 1 5A92436B
-P 7200 4300
-F 0 "SW2" H 7250 4400 50  0000 L CNN
-F 1 "SW_Push" H 7200 4240 50  0000 C CNN
-F 2 "" H 7200 4500 50  0001 C CNN
-F 3 "" H 7200 4500 50  0001 C CNN
-	1    7200 4300
-	0    -1   -1   0   
-$EndComp
 NoConn ~ 6850 3750
-$Comp
-L R R9
-U 1 1 5A924548
-P 7200 2700
-F 0 "R9" V 7280 2700 50  0000 C CNN
-F 1 "249k" V 7200 2700 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7130 2700 50  0001 C CNN
-F 3 "" H 7200 2700 50  0001 C CNN
-	1    7200 2700
-	1    0    0    -1  
-$EndComp
-Text Notes 7300 4350 0    60   ~ 0
-PROG
 $Comp
 L VCC #PWR02
 U 1 1 5A933885
@@ -399,7 +375,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 3950 6900 3950
 Wire Wire Line
-	6900 3950 6900 4800
+	6900 4800 6900 3950
 Wire Wire Line
 	5050 3850 5000 3850
 Wire Wire Line
@@ -511,16 +487,6 @@ Connection ~ 4100 4600
 Wire Wire Line
 	6000 2500 8350 2500
 Wire Wire Line
-	6850 3650 7200 3650
-Wire Wire Line
-	7200 2850 7200 4100
-Connection ~ 7200 3650
-Wire Wire Line
-	7200 2550 7200 2500
-Wire Wire Line
-	7200 4800 7200 4500
-Connection ~ 7200 4800
-Wire Wire Line
 	3950 3350 3950 4200
 Wire Wire Line
 	3950 3350 5050 3350
@@ -550,7 +516,7 @@ Connection ~ 2600 3400
 Wire Wire Line
 	3000 3850 3000 3750
 Wire Wire Line
-	3000 3750 2600 3750
+	2600 3750 3000 3750
 Connection ~ 2600 3750
 Wire Wire Line
 	2600 3250 2850 3250
@@ -567,7 +533,6 @@ Wire Wire Line
 	4100 2750 6000 2750
 Wire Wire Line
 	6000 2750 6000 2500
-Connection ~ 7200 2500
 Connection ~ 4100 2750
 Wire Wire Line
 	9450 2600 9950 2600
@@ -713,10 +678,33 @@ Connection ~ 3800 3250
 Wire Wire Line
 	3300 3850 3300 4800
 Connection ~ 3300 4800
-Text Label 6900 3650 0    60   ~ 0
-PROG
 Text Notes 1100 2350 0    60   ~ 0
 LTC4365 UV/OV resistor network set to 3-6V\nXC6210 max rated voltage 6.0 V (abs max 6.5 V)\nESP8266 ADC voltage range 0-1 V\nVmon voltage divider has 7.024:1 ratio
 Text Label 3100 4200 0    60   ~ 0
 Vmon
+$Comp
+L SW_SPDT SW2
+U 1 1 5AA19D0E
+P 7350 4200
+F 0 "SW2" H 7350 4370 50  0000 C CNN
+F 1 "SW_SPDT" H 7350 4000 50  0000 C CNN
+F 2 "ssop_20:CL-SB-12B-02T" H 7350 4200 50  0001 C CNN
+F 3 "" H 7350 4200 50  0001 C CNN
+	1    7350 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4100 7550 2500
+Connection ~ 7550 2500
+Wire Wire Line
+	7550 4300 7550 4800
+Connection ~ 7550 4800
+Wire Wire Line
+	6850 3650 7100 3650
+Wire Wire Line
+	7100 3650 7100 4200
+Wire Wire Line
+	7100 4200 7150 4200
+Text Label 6900 3650 0    60   ~ 0
+PROG
 $EndSCHEMATC
