@@ -375,7 +375,7 @@ Wire Wire Line
 Wire Wire Line
 	6850 3950 6900 3950
 Wire Wire Line
-	6900 4800 6900 3950
+	6900 3950 6900 4800
 Wire Wire Line
 	5050 3850 5000 3850
 Wire Wire Line
@@ -516,7 +516,7 @@ Connection ~ 2600 3400
 Wire Wire Line
 	3000 3850 3000 3750
 Wire Wire Line
-	2600 3750 3000 3750
+	3000 3750 2600 3750
 Connection ~ 2600 3750
 Wire Wire Line
 	2600 3250 2850 3250
@@ -669,7 +669,7 @@ U 1 1 5A92F920
 P 3300 3400
 F 0 "U2" H 3300 3350 60  0000 C CNN
 F 1 "XC6210" H 3300 3450 60  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT89-5_Housing_Handsoldering" H 3300 3400 60  0001 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-89-5_Housing_Handsoldering" H 3300 3400 60  0001 C CNN
 F 3 "" H 3300 3400 60  0001 C CNN
 	1    3300 3400
 	1    0    0    -1  
